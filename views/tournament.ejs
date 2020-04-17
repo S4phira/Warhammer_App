@@ -1,0 +1,133 @@
+<%- include('partials/header') %>
+<link rel="stylesheet" href="css/tournament.css" />
+<title>
+    Tournaments
+</title>
+
+<%- include('partials/body') %>
+<nav class="navbar  navbar-expand-lg  navbar-fixed-top" data-toggle="sticky-onscroll">
+    <a class="navbar-brand" href="/"> <img src="img/warhammer40k-logo.png" width="240" height="60" alt="">
+    </a>
+    <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class=" navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="/">Strona główna</a>
+            </li>
+
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+
+            <li class="nav-item ">
+                <a class="nav-link" href="#Events" id='userBox'>Zalogowany jako: <%=userLogin%></a>
+            </li>
+            <li class="nav-item ">
+                <a class="btn" href='/logout' role='button' id='logoutButton'>Wyloguj się</a>
+            </li>
+        </ul>
+
+    </div>
+</nav>
+<section class="tournament">
+    <p class="header">
+        Lista dostępnych wydarzeń:
+    </p>
+    <div class="container-fluid">
+
+        <% foundEvents.forEach(function(tournament){ %>
+        <div class="row">
+            <div class="tournament-name col-xl-4 col-lg-4 col-md-7 col-10">
+                <p>
+                    <%=tournament.title%>
+                </p>
+                <p>
+                    <%=tournament.date%>
+                </p>
+            </div>
+
+            <div class="info-tournament col-xl-4 col-lg-4 col-md-7 col-10">
+                <p>Opis</p>
+                <p>
+                    <%=tournament.description%>
+                </p>
+                <% if(userType === 'admin'){%>
+                <form action='/delete' method='post'>
+                    <button name='deleteEvent' value='<%=tournament._id%>' class="btn btn-dark btn-sm">Usuń
+                        wydarzenie</button>
+                </form>
+                <% } %>
+                <% if(userType === 'admin' && tournament.status !== 'active'){%>
+                <form action='/activateEvent' method='post'>
+                    <button name='activateEvent' value='<%=tournament._id%>' class="btn btn-dark btn-sm">Rozpocznij
+                        wydarzenie</button>
+                </form>
+                <% } %>
+                <% if(userType === 'member' && (tournament.status !== 'active' &&  !userEvents.includes(tournament._id))){%>
+                <form action='/join' method='post'>
+                    <button name='joinEvent' value='<%=tournament._id%>' class="btn btn-dark btn-sm">Zapisz
+                        się</button>
+                </form>
+                <% } %>
+                <% if(userType === 'member' && tournament.status === 'active'){%>
+                <p>EVENT TRWA!</p>
+                <% } %>
+                <% if(userType === 'member' && (tournament.status === 'active' && userEvents.includes(tournament._id)) ){%>
+                <form action='/userJoin' method='post'>
+                    <button name='userJoin' value='<%=tournament._id%>' class="btn btn-dark btn-sm">Dołącz do
+                        turnieju!</button>
+                </form>
+                <% } %>
+                <% if(userType === 'admin' && tournament.status === 'active'){%>
+                <form action='/userJoin' method='post'>
+                    <button name='userJoin' value='<%=tournament._id%>' class="btn btn-dark btn-sm ">Dołącz do
+                        turnieju!</button>
+                </form>
+                <% } %>
+                <% if( userEvents.includes(tournament._id)){%>
+                <form action='/optOut' method='post'>
+                    <button name='optOut' value='<%=tournament._id%>' class="btn btn-dark btn-sm">Opuść
+                        wydarzenie</button>
+                </form>
+                <% } %>
+
+            </div>
+        </div>
+        <% }) %>
+    </div>
+    <% if(userType === 'admin'){%>
+    <form action='/update' method='post'>
+        <div class="add-tournament">
+            <form id="button-admin">
+                <p>Dodaj nowe wydarzenie:</p>
+                <div class="form-group">
+                    <label>Nazwa:</label>
+                    <textarea name='title' class="form-control" rows="1"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Data:</label>
+                    <textarea name='date' class="form-control" rows="1"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>Opis:</label>
+                    <textarea class="form-control" name='desc' rows="1"></textarea>
+                </div>
+                <input type="submit" name='addNewEvent' value="Dodaj" class="btn btn-dark">
+                  <form action="/uploading" method="POST" enctype="multipart/form-data">
+      <div class="file-field input-field">
+        <div class="btn grey">
+          <input name="myImage" type="file">
+        </div>
+      </div>
+      <button type="submit" class="btn ">Submit</button>
+    </form>
+            </form>
+        </div>
+    </form>
+    <% } %>
+
+</section>
+<%- include('partials/footer') %>

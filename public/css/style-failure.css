@@ -1,0 +1,11 @@
+.jumbotron {
+  background-image: url(../img/failure.jpg);
+  height: 100vh;
+  margin: 0;
+  font-family: 'Righteous', cursive;
+}
+
+.container {
+  margin-top: 10%;
+}
+/*# sourceMappingURL=style-failure.css.map */

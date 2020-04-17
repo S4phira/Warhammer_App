@@ -1,0 +1,20 @@
+.container-fluid {
+  background-image: url(../img/generator.jpg);
+  height: calc(100vh);
+  background-repeat: no-repeat;
+  font-family: 'Righteous',cursive;
+}
+
+.container-fluid img {
+  padding: 150px 0 0 250px;
+}
+
+.container-fluid h1 {
+  padding: 100px 0 0 350px;
+  font-size: 45px;
+}
+
+.container-fluid button {
+  margin: 50px 0 0 440px;
+}
+/*# sourceMappingURL=style-generator.css.map */

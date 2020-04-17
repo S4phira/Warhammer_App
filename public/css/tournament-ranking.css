@@ -1,0 +1,54 @@
+* {
+  font-family: 'Righteous', cursive;
+}
+
+.info {
+  height: calc(100vh);
+  background-image: url(../img/tournament-player.jpg);
+  font-family: 'Righteous', cursive;
+}
+
+.navbar {
+  background-color: black;
+}
+
+.navbar a {
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 1.4rem;
+}
+
+.navbar a:hover {
+  color: yellow;
+}
+
+.navbar ul li {
+  margin-right: 25px;
+}
+
+.navbar-toggler-icon {
+  color: white;
+}
+
+.ranking {
+  text-align: center;
+  padding-top: 5%;
+}
+
+.ranking p {
+  font-size: 2.5rem;
+}
+
+@media screen and (max-width: 1000px) {
+  #logoutButton {
+    padding-left: 0;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .ranking {
+    font-size: 2rem;
+  }
+}
+/*# sourceMappingURL=tournament-ranking.css.map */

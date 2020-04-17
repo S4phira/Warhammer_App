@@ -1,0 +1,103 @@
+* {
+    font-family: 'Righteous', cursive;
+
+}
+
+.info {
+    height: calc(100vh);
+    background-image: url(../img/tournament-player.jpg);
+    font-family: 'Righteous', cursive;
+}
+
+.navbar {
+    background-color: black;
+
+    a {
+
+        color: white;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 1.4rem;
+    }
+
+    a:hover {
+        color: yellow;
+    }
+
+    ul {
+        li {
+            margin-right: 25px;
+        }
+    }
+}
+
+.navbar-toggler-icon {
+    color: white;
+}
+
+.form {
+    padding: 5% 0 0 18%;
+    font-size: 2.7rem;
+
+    label {
+        min-width: 130px;
+    }
+}
+
+.info {
+    padding-top: 2%;
+
+    p {
+        padding-left: 18%;
+        font-size: 2rem;
+
+    }
+
+}
+
+.btn-score {
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+@media screen and (max-width: 1000px) {
+    .form {
+        padding: 5% 0 0 10%;
+        font-size: 1.5rem;
+    }
+
+    .info p {
+        text-align: center;
+        padding: 0;
+    }
+
+    #logoutButton {
+        padding-left: 0;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .btn-score {
+        margin: 0;
+    }
+
+    .form {
+        padding-left: 14%;
+
+        label {
+            min-width: 80px;
+        }
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .form {
+        padding-left: 11%;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .form {
+        padding-left: 8%;
+    }
+}

@@ -1,0 +1,40 @@
+html,
+body {
+  background-image: url(../img/login-photo.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  font-family: 'Righteous', cursive;
+}
+
+.container {
+  height: 100%;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.card {
+  height: 370px;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 400px;
+  background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.card-header h3 {
+  color: white;
+  text-align: center;
+}
+
+.input-group-prepend span {
+  width: 50px;
+  background-color: #FFC312;
+  color: black;
+  border: 0 !important;
+}
+
+.register_btn {
+  color: black;
+  background-color: #FFC312;
+}
+/*# sourceMappingURL=registration.css.map */

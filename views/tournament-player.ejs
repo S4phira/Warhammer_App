@@ -1,0 +1,59 @@
+<%- include('partials/header') %>
+<link rel="stylesheet" href="css/tournament-player.css" />
+<title>Obecny turniej</title>
+<%- include('partials/body') %>
+<nav class="navbar  navbar-expand-lg  navbar-fixed-top" data-toggle="sticky-onscroll">
+    <a class="navbar-brand" href="/"> <img src="img/warhammer40k-logo.png" width="240" height="60" alt="">
+    </a>
+    <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class=" navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="/">Strona główna</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/tournament">Turnieje</a>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+
+            <li class="nav-item ">
+                <a class="nav-link" href="#Events" id='userBox'>Zalogowany jako: <%=userLogin%></a>
+            </li>
+            <li class="nav-item ">
+                <a class="btn" href='/logout' role='button' id='logoutButton'>Wyloguj się</a>
+            </li>
+        </ul>
+
+    </div>
+</nav>
+<section class="info">
+    <p><%=tournament.date%></p>
+    <p><%=tournament.date%></p>
+    <div class="form">
+        <form action='/endRound' method='post'>
+            <% for(let i = 0, t = 1; i < participants.length; i += 2, t++){ %>
+
+            <div class="form-group">
+                <label>Stół <%=t%></label>
+                <input placeholder="<%=participants[i]%>" name='<%=participants[i]%>'
+                    class="btn btn-score btn-dark btn-lg col-lg-2 col-md-3 col-3">
+                vs
+                <input placeholder="<%=participants[i+1]%>" name='<%=participants[i+1]%>'
+                    class="btn btn-score btn-dark btn-lg col-lg-2 col-md-3 col-3">
+            </div>
+            <% } %>
+            <% if(userType === 'admin'){%>
+
+            <button class="btn btn-dark btn-sumbit" name='endRound' value='<%=eventId%>'>Zakończ rundę</button>
+            <% } %>
+        </form>
+    </div>
+
+
+</section>
+
+<%- include('partials/footer') %>

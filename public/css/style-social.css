@@ -1,0 +1,176 @@
+@import url("style-login.css");
+* {
+  font-family: 'Righteous', cursive;
+}
+
+.page-header {
+  background-color: black;
+  text-align: center;
+}
+
+.page-header img {
+  width: 400px;
+}
+
+.navbar {
+  background-color: black;
+}
+
+.navbar a {
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 1.4rem;
+}
+
+.navbar a:hover {
+  color: yellow;
+}
+
+.navbar ul li {
+  margin-right: 25px;
+}
+
+.navbar-toggler-icon {
+  color: white;
+}
+
+html {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  color: white;
+  margin: 0;
+  padding: 0;
+  -webkit-perspective: 1px;
+          perspective: 1px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+header p {
+  padding: 5% 20% 10% 20%;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.heading {
+  padding-top: 5%;
+  font-size: 6rem;
+  text-align: center;
+}
+
+header,
+header:before {
+  background: 50% 50% / cover;
+}
+
+header::before {
+  bottom: 0;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: block;
+  background-image: url(../img/p1.jpg);
+  background-size: cover;
+  -webkit-transform-origin: center center 0;
+          transform-origin: center center 0;
+  -webkit-transform: translateZ(-1px) scale(2);
+          transform: translateZ(-1px) scale(2);
+  z-index: -1;
+  min-height: 100vh;
+}
+
+header * {
+  letter-spacing: 0.2em;
+}
+
+#Events {
+  background-color: #222831;
+}
+
+#Events p {
+  font-size: 2rem;
+  padding: 5% 20% 10% 20%;
+  text-align: center;
+  margin: 0;
+}
+
+#Place {
+  background-color: #282828;
+}
+
+#Place .row {
+  margin: 50px 0 50px 0;
+}
+
+#Place p {
+  font-size: 1.5rem;
+  padding: 5% 0 0 0;
+  text-align: center;
+}
+
+#Place img {
+  margin: 2% 0 2% 0;
+  height: 250px;
+}
+
+@media screen and (max-width: 1400px) {
+  header p {
+    padding: 5% 15% 0 15%;
+    font-size: 1.5rem;
+  }
+  #Events p {
+    padding: 5% 15% 0 15%;
+    font-size: 1.5rem;
+  }
+  .heading {
+    font-size: 4rem;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  header p {
+    font-size: 1.3rem;
+  }
+  #Events p {
+    font-size: 1.3rem;
+  }
+  .heading {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  header p {
+    font-size: 1rem;
+  }
+  #Events p {
+    font-size: 1rem;
+  }
+  .heading {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  header p {
+    padding: 5% 5% 0 5%;
+    font-size: 0.9rem;
+  }
+  #Events p {
+    padding: 5% 5% 0 5%;
+    font-size: 0.9rem;
+  }
+  .navbar-brand img {
+    width: 200px;
+    height: 50px;
+  }
+}
+/*# sourceMappingURL=style-social.css.map */

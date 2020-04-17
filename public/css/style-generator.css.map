@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,gBAAgB,CAAC;EACb,gBAAgB,EAAE,yBAAyB;EAC3C,MAAM,EAAE,WAAW;EACnB,iBAAiB,EAAE,SAAS;EAC5B,WAAW,EAAE,mBAAmB;CAYnC;;AAhBD,AAMI,gBANY,CAMZ,GAAG,CAAC;EACA,OAAO,EAAE,eAAe;CAC3B;;AARL,AASI,gBATY,CASZ,EAAE,CAAC;EACC,OAAO,EAAG,eAAe;EACzB,SAAS,EAAE,IAAI;CAClB;;AAZL,AAaI,gBAbY,CAaZ,MAAM,CAAA;EACF,MAAM,EAAE,cAAc;CACzB",
+    "sources": [
+        "style-generator.scss"
+    ],
+    "names": [],
+    "file": "style-generator.css"
+}

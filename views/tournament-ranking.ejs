@@ -1,0 +1,50 @@
+<%- include('partials/header') %>
+<link rel="stylesheet" href="css/tournament-ranking.css" />
+<%- include('partials/body') %>
+<nav class="navbar  navbar-expand-lg  navbar-fixed-top" data-toggle="sticky-onscroll">
+    <a class="navbar-brand" href="tournament.html"> <img src="img/warhammer40k-logo.png" width="240" height="60" alt="">
+    </a>
+    <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class=" navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">Strona główna</a>
+            </li>
+
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li class="nav-item ">
+                <a class="nav-link" href="#Events">Zalogowany jako: <%=userLogin%></a>
+            </li>
+            <li class="nav-item ">
+                <a class="btn" href='/logout' role='button' id='logoutButton'>Wyloguj się</a>
+            </li>
+        </ul>
+
+
+    </div>
+</nav>
+<section class="info">
+    <div class="ranking">
+        <p>Wyniki turnieju:</p>
+
+        <form action='/endTournament' method='post'>
+            <% ranking.forEach(function(player){ %>
+            <div>
+                <p><%=player[0]%> - <%=player[1]%> </p>
+            </div>
+            <% }) %>
+            <% if(userType === 'admin'){%>
+
+            <button name='endTournament' value='<%=eventId%>' class="btn btn-dark">Zakończ turniej</button>
+            <% } %>
+        </form>
+
+    </div>
+
+</section>
+
+<%- include('partials/footer') %>
