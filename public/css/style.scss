@@ -1,120 +1,95 @@
-
-.home-page{
-    height: calc(100vh);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url(../img/place-photo.jpg);
-}
-.photo{
-    padding: 5% 30% 5% 33%;
-}
-.btn{
-    height: 230px;
-    width: 400px;
-    font-size: 3rem;
-    text-transform: uppercase;
-    font-family: 'Righteous', cursive;
-    border-width: 3px;
-
-}
-.buttons{
-    padding-left: 25%;
-}
-.row{
+.home-page {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../img/place-photo.jpg);
+  .photo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2% 0;
+    @media screen and (max-width: 768px) {
+      padding-top: 10%;
+    }
+    @media screen and (max-width: 425px) {
+      padding-top: 15%;
+    }
+    @media screen and (max-width: 320px) {
+      padding-top: 35%;
+    }
+    .logo {
+      max-width: 500px;
+      margin: 0;
+      @media screen and (max-width: 425px) {
+        max-width: 300px;
+      }
+      @media screen and (max-width: 320px) {
+        max-width: 200px;
+      }
+    }
+  }
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding-bottom: 4%;
-}
-.btn:hover{
-    color: yellow;
-}
-#About {
-    background-image: url(../img/button1.jpg);
+    @media screen and (max-width: 768px) {
+      padding: 5% 0 46% 0;
+    }
+    @media screen and (max-width: 425px) {
+      padding: 5% 0 46% 0;
+    }
+    @media screen and (max-width: 320px) {
+      padding: 10% 0 46% 0;
+    }
+    .buttons {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
 
+      .btn {
+        height: 230px;
+        width: 400px;
+        font-size: 3rem;
+        text-transform: uppercase;
+        font-family: "Righteous", cursive;
+        border-width: 3px;
+        margin-bottom: 5%;
+        @media screen and (max-width: 768px) {
+          height: 250px;
+          width: 350px;
+        }
+        @media screen and (max-width: 425px) {
+          height: 100px;
+          width: 150px;
+          font-size: 1rem;
+          padding-bottom: 2%;
+        }
+      }
+      .btn:hover {
+        color: #f6e34e;
+      }
+    }
+  }
+}
+
+#About {
+  background: url(../img/button1.jpg) no-repeat center/cover;
 }
 #Tournament {
-    background-image: url(../img/button2.jpg);
-    background-repeat: no-repeat;
-    margin-left: 1%;
+  background: url(../img/button2.jpg) no-repeat center/cover;
+  margin-left: 1%;
 }
 #Generator {
-    background-image: url(../img/button3.jpg);
+  background: url(../img/button3.jpg) no-repeat center/cover;
 }
 #Killteam {
-    background-image: url(../img/button4.jpg);
-        margin-left: 1%;
-
+  background: url(../img/button4.jpg) no-repeat center/cover;
 }
 #desc-KT {
-    color:yellow;
-    position: relative;
-    font-size: 35px;
-
-}
-@media screen and (max-width: 1300px){
-    .logo{
-        width: 380px;
-    }
-    .photo{
-        padding-left: 25%;
-    }
-    .buttons{
-        padding-left: 5%;
-    }
-}
-@media screen and (max-width: 1000px){
-    .logo{
-        width: 350px;
-    }
-
-#About{
-    background-image: url(../img/button1-mobile.jpg);
-    width: 250px;
-    height: 200px;
-}
-#Tournament{
-    background-image: url(../img/button2-mobile.jpg);
-    width: 250px;
-    height: 200px;
-}
-    .buttons{
-        padding-left: 12%;
-    }
-}
-@media screen and (max-width: 670px){
-    .buttons{
-        padding-left: 5%;
-    }
-}
-@media screen and (max-width: 425px){
-    .photo{
-        padding-left: 17%;
-    }
-    .logo{
-        width: 250px;
-    }
-    .buttons{
-        padding-left: 20%;
-
-    }
-    #About{
-        margin-bottom: 15%;
-    }
-}
-@media screen and (max-width: 375px){
-    .photo{
-        padding-left: 15%;
-    }
-    .buttons{
-        padding-left: 15%;
-
-    }
-}
-@media screen and (max-width: 320px){
-    .photo{
-        padding-left: 10%;
-        padding-bottom: 20%;
-    }
-    .buttons{
-        padding-left: 10%;
-
-    }
+  color: #f6e34e;
+  position: relative;
+  font-size: 35px;
+  @media screen and (max-width: 425px) {
+    font-size: 1rem;
+  }
 }

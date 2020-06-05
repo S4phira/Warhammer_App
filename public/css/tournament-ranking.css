@@ -1,11 +1,11 @@
 * {
-  font-family: 'Righteous', cursive;
+  font-family: "Righteous", cursive;
 }
 
 .info {
   height: calc(100vh);
   background-image: url(../img/tournament-player.jpg);
-  font-family: 'Righteous', cursive;
+  font-family: "Righteous", cursive;
 }
 
 .navbar {
@@ -29,6 +29,11 @@
 
 .navbar-toggler-icon {
   color: white;
+}
+
+.navbar-brand img {
+  width: 180px;
+  height: 50px;
 }
 
 .ranking {

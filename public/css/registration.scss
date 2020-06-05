@@ -1,40 +1,43 @@
 html,
 body {
-    background-image: url(../img/login-photo.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100%;
-    font-family: 'Righteous', cursive;
+  background-image: url(../img/login-photo.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: "Righteous", cursive;
 }
 
 .container {
-    height: 100%;
-    align-content: center;
+  height: 100%;
+  align-content: center;
 }
 
 .card {
-    height: 370px;
-    margin-top: auto;
-    margin-bottom: auto;
-    width: 400px;
-    background-color: rgba(0, 0, 0, 0.5) !important;
+  height: 370px;
+  margin: 30%;
+  width: 400px;
+  background-color: rgba(0, 0, 0, 0.5) !important;
+  @media screen and (max-width: 768px) {
+    margin: 15% 0;
+  }
+  @media screen and (max-width: 425px) {
+    margin: 45% 0;
+  }
 }
 
 .card-header h3 {
-    color: white;
-    text-align: center;
+  color: white;
+  text-align: center;
 }
 
 .input-group-prepend span {
-    width: 50px;
-    background-color: #FFC312;
-    color: black;
-    border: 0 !important;
+  width: 50px;
+  background-color: #ffc312;
+  color: black;
+  border: 0 !important;
 }
-.register_btn{
-    color: black;
-    background-color: #FFC312;
+.register_btn {
+  color: black;
+  background-color: #ffc312;
 }
-.button-back{
-
+.button-back {
 }

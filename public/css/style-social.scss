@@ -1,198 +1,150 @@
 @import url("style-login.css");
 $color-text: white;
-$color-primary-page:#222831;
+$color-primary-page: #222831;
 
 * {
-    font-family: 'Righteous', cursive;
-
+  font-family: "Righteous", cursive;
 }
 
 // navbar
 .page-header {
-    background-color: black;
-    text-align: center;
+  background-color: black;
+  text-align: center;
 
-    img {
-        width: 400px;
-    }
+  img {
+    width: 400px;
+  }
 }
 
 .navbar {
-    background-color: black;
+  background-color: black;
 
-    // padding-left: 35%;
-    a {
+  // padding-left: 35%;
+  a {
+    color: $color-text;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1.4rem;
+  }
 
-        color: $color-text;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        font-size: 1.4rem;
+  a:hover {
+    color: yellow;
+  }
+
+  ul {
+    li {
+      margin-right: 25px;
     }
-
-    a:hover {
-        color: yellow;
-    }
-
-    ul {
-        li {
-            margin-right: 25px;
-        }
-    }
+  }
 }
 
 .navbar-toggler-icon {
-    color: white;
-}
-
-// section home-page
-
-
-//background
-html {
-    height: 100%;
-    overflow: hidden;
-}
-
-body {
-    color: $color-text;
-    margin: 0;
-    padding: 0;
-    perspective: 1px;
-    transform-style: preserve-3d;
-    overflow-y: scroll;
-    overflow-x: hidden;
-
-
-}
-
-header {
-    p {
-        padding: 5% 20% 10% 20%;
-        font-size: 2rem;
-        text-align: center;
-    }
-
+  color: white;
 }
 
 .heading {
-    padding-top: 5%;
-    font-size: 6rem;
-    text-align: center;
+  padding-top: 5%;
+  font-size: 6rem;
+  text-align: center;
 }
-
-header,
-header:before {
-    background: 50% 50% / cover;
-}
-
-header::before {
-    bottom: 0;
-    content: "";
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    display: block;
-    background-image: url(../img/p1.jpg);
-    background-size: cover;
-    transform-origin: center center 0;
-    transform: translateZ(-1px) scale(2);
-    z-index: -1;
-    min-height: 100vh;
-}
-
-header * {
-    letter-spacing: 0.2em;
+#About {
+  background-image: url(../img/social-1.jpg);
+  color: white;
+  header {
+    p {
+      padding: 5% 20% 20% 20%;
+      font-size: 2rem;
+      text-align: center;
+      margin: 0;
+      @media screen and (max-width: 768px) {
+        font-size: 1.5rem;
+      }
+      @media screen and (max-width: 425px) {
+        font-size: 0.9rem;
+      }
+    }
+  }
 }
 
 #Events {
-    background-color: #222831;
+  background-color: #141414;
+  color: white;
 
-    p {
-        font-size: 2rem;
-        padding: 5% 20% 10% 20%;
-        text-align: center;
-        margin: 0;
+  p {
+    font-size: 2rem;
+    padding: 5% 20% 10% 20%;
+    text-align: center;
+    margin: 0;
+    @media screen and (max-width: 768px) {
+      font-size: 1.5rem;
     }
+    @media screen and (max-width: 425px) {
+      font-size: 0.9rem;
+    }
+  }
 }
 
 #Place {
-    .row {
-        margin: 50px 0 50px 0;
+  background-image: url(../img/social-3.jpg);
+  color: white;
+  padding-bottom: 6%;
+  .row {
+    padding: 2% 0;
+  }
+  p {
+    font-size: 1.5rem;
+    padding: 5% 0 0 0;
+    text-align: center;
+    margin: auto;
+    @media screen and (max-width: 768px) {
+      font-size: 1.5rem;
+      padding-bottom: 3%;
     }
-
-    background-color: #282828;
-
-    p {
-        font-size: 1.5rem;
-        padding: 5% 0 0 0;
-        text-align: center;
+    @media screen and (max-width: 425px) {
+      font-size: 0.9rem;
+      padding: 5% 20% 10% 20%;
     }
-
-    img {
-        margin: 2% 0 2% 0;
-        height: 250px;
-    }
-
+  }
 }
 
 @media screen and (max-width: 1400px) {
-    header p {
-        padding: 5% 15% 0 15%;
-        font-size: 1.5rem;
-    }
+  header p {
+    padding: 5% 15% 0 15%;
+    font-size: 1.5rem;
+  }
 
-    #Events p {
-        padding: 5% 15% 0 15%;
-        font-size: 1.5rem;
-    }
-
-    .heading {
-        font-size: 4rem;
-    }
+  .heading {
+    font-size: 4rem;
+  }
 }
 
 @media screen and (max-width: 650px) {
-    header p {
-        font-size: 1.3rem;
-    }
-
-    #Events p {
-        font-size: 1.3rem;
-    }
-
-    .heading {
-        font-size: 3rem;
-    }
+  header p {
+    font-size: 1.3rem;
+  }
+  .heading {
+    font-size: 3rem;
+  }
 }
 
 @media screen and (max-width: 450px) {
-    header p {
-        font-size: 1rem;
-    }
+  header p {
+    font-size: 1rem;
+  }
 
-    #Events p {
-        font-size: 1rem;
-    }
-
-    .heading {
-        font-size: 2rem;
-    }
+  .heading {
+    font-size: 2rem;
+  }
 }
 
 @media screen and (max-width: 350px) {
-    header p {
-        padding: 5% 5% 0 5%;
-        font-size: 0.9rem;
-    }
+  header p {
+    padding: 5% 5% 0 5%;
+    font-size: 0.9rem;
+  }
 
-    #Events p {
-        padding: 5% 5% 0 5%;
-        font-size: 0.9rem;
-    }
-
-    .navbar-brand img {
-        width: 200px;
-        height: 50px;
-    }
+  .navbar-brand img {
+    width: 180px;
+    height: 50px;
+  }
 }

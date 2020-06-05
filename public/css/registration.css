@@ -3,8 +3,7 @@ body {
   background-image: url(../img/login-photo.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100%;
-  font-family: 'Righteous', cursive;
+  font-family: "Righteous", cursive;
 }
 
 .container {
@@ -15,10 +14,21 @@ body {
 
 .card {
   height: 370px;
-  margin-top: auto;
-  margin-bottom: auto;
+  margin: 30%;
   width: 400px;
   background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    margin: 15% 0;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .card {
+    margin: 45% 0;
+  }
 }
 
 .card-header h3 {
@@ -28,13 +38,13 @@ body {
 
 .input-group-prepend span {
   width: 50px;
-  background-color: #FFC312;
+  background-color: #ffc312;
   color: black;
   border: 0 !important;
 }
 
 .register_btn {
   color: black;
-  background-color: #FFC312;
+  background-color: #ffc312;
 }
 /*# sourceMappingURL=registration.css.map */

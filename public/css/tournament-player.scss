@@ -1,103 +1,103 @@
 * {
-    font-family: 'Righteous', cursive;
-
+  font-family: "Righteous", cursive;
 }
 
 .info {
-    height: calc(100vh);
-    background-image: url(../img/tournament-player.jpg);
-    font-family: 'Righteous', cursive;
+  height: calc(100vh);
+  background-image: url(../img/tournament-player.jpg);
+  font-family: "Righteous", cursive;
 }
 
 .navbar {
-    background-color: black;
+  background-color: black;
 
-    a {
+  a {
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1.4rem;
+  }
 
-        color: white;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        font-size: 1.4rem;
+  a:hover {
+    color: #f6e34e;
+  }
+
+  ul {
+    li {
+      margin-right: 25px;
     }
-
-    a:hover {
-        color: yellow;
-    }
-
-    ul {
-        li {
-            margin-right: 25px;
-        }
-    }
+  }
 }
 
 .navbar-toggler-icon {
-    color: white;
+  color: white;
+}
+.navbar-brand img {
+  width: 180px;
+  height: 50px;
 }
 
 .form {
-    padding: 5% 0 0 18%;
-    font-size: 2.7rem;
+  padding: 5% 0 0 18%;
+  font-size: 2.7rem;
 
-    label {
-        min-width: 130px;
-    }
+  label {
+    min-width: 130px;
+  }
 }
 
 .info {
-    padding-top: 2%;
+  padding-top: 2%;
 
-    p {
-        padding-left: 18%;
-        font-size: 2rem;
-
-    }
-
+  p {
+    padding-left: 18%;
+    font-size: 2rem;
+  }
 }
 
 .btn-score {
-    margin-right: 5%;
-    margin-left: 5%;
+  margin-right: 5%;
+  margin-left: 5%;
 }
 
 @media screen and (max-width: 1000px) {
-    .form {
-        padding: 5% 0 0 10%;
-        font-size: 1.5rem;
-    }
+  .form {
+    padding: 5% 0 0 10%;
+    font-size: 1.5rem;
+  }
 
-    .info p {
-        text-align: center;
-        padding: 0;
-    }
+  .info p {
+    text-align: center;
+    padding: 0;
+  }
 
-    #logoutButton {
-        padding-left: 0;
-    }
+  #logoutButton {
+    padding-left: 0;
+  }
 }
 
 @media screen and (max-width: 425px) {
-    .btn-score {
-        margin: 0;
-    }
+  .btn-score {
+    margin: 0;
+  }
 
-    .form {
-        padding-left: 14%;
+  .form {
+    padding-left: 14%;
 
-        label {
-            min-width: 80px;
-        }
+    label {
+      min-width: 80px;
     }
+  }
 }
 
 @media screen and (max-width: 375px) {
-    .form {
-        padding-left: 11%;
-    }
+  .form {
+    padding-left: 11%;
+  }
 }
 
 @media screen and (max-width: 320px) {
-    .form {
-        padding-left: 8%;
-    }
+  .form {
+    padding-left: 8%;
+  }
 }
