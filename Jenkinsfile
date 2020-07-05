@@ -4,7 +4,7 @@ node {
   checkout scm
  }
   stage('Deploy - Production') {
-     sh('git push heroku master')
+     bat('git push heroku master')
   } 
  }
  catch (err) {
