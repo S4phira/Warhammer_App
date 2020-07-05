@@ -1,7 +1,4 @@
 node {
-  currentBuild.result = "SUCCESS"
-  setBuildStatus("Build started", "PENDING");
-
   try {
     stage('Checkout') {
       checkout scm
