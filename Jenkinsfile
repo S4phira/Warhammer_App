@@ -15,3 +15,4 @@ node {
     setBuildStatus("Production build complete", "SUCCESS");
   }
 }
+}
