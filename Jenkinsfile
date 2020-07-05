@@ -14,5 +14,8 @@ node {
     }
     setBuildStatus("Production build complete", "SUCCESS");
   }
+  catch (err) {
+	  println err;
+  }
 }
 }
