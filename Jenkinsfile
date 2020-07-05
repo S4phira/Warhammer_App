@@ -16,7 +16,7 @@ node {
   }
   
 }
-catch (ExceptionName err) {
+catch (err) {
       println err;
   }
 }
